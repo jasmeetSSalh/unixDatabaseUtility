@@ -13,14 +13,14 @@ if [ -z "$DB_USERNAME" ] || [ -z "$DB_PASSWORD" ]; then
 fi
 
 # Optional: Set defaults for host, port, and SID if not provided
-DB_HOST="${DB_HOST:-oracle.cs.torontomu.ca}"
+DB_HOST="${DB_HOST:-oracle.scs.ryerson.ca}"
 DB_PORT="${DB_PORT:-1521}"
 DB_SID="${DB_SID:-orcl}"
 
 # Construct connection string
 CONNECTION_STRING="${DB_USERNAME}/${DB_PASSWORD}@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=${DB_HOST})(Port=${DB_PORT}))(CONNECT_DATA=(SID=${DB_SID})))"
 
-sqlplus64 "$CONNECTION_STRING" <<EOF
+sqlplus "$CONNECTION_STRING" <<EOF
 
 # logic
 

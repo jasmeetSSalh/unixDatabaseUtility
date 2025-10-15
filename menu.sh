@@ -21,8 +21,6 @@ MainMenu()
         echo " $IS_SELECTED3 3) Populate Tables"
         echo " $IS_SELECTED4 4) Query Tables"
         echo " "
-        echo " $IS_SELECTEDX X) Force/Stop/Kill Oracle DB"
-        echo " "
         echo " $IS_SELECTEDE E) End/Exit"
         echo "Choose: "
         read CHOICE
@@ -45,7 +43,10 @@ MainMenu()
         then
             bash ./queries.sh
             Pause
-        elif [ "$CHOICE" == "E" ]
+        elif [ "$CHOICE" == "E" || "$CHOICE" == "e" ]
+        then
+            exit
+        elif [ "$CHOICE" == "b" ] || [ "$CHOICE" == "back" ]
         then
             exit
         fi

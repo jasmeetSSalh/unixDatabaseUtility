@@ -1,0 +1,6 @@
+# Environment variables with sensitive data
+.env
+
+# Oracle SQL*Plus history
+sqlplus_history.log
+*.log
